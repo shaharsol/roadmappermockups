@@ -13,9 +13,9 @@
 <link href="http://assets.codemill.io/css/londinium-ext.css" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script></head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script></head>
 <!--
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
@@ -174,161 +174,68 @@
 
 <div class="page-header">
 	<div class="page-title">
-		<h3>Java for noobs</h3>
-	</div>
-</div>
-
-<div class="page-header">
-	<div class="page-title">
 		&nbsp;
 	</div>
 </div>
 
 
-<div class="page-header">
-	<div class="page-title">
-		<a href="author-edit-roadmap.html" class="btn btn-success"><i class="icon-pencil4"></i> Edit RoadMap</a>
-	</div>
-</div>
-
-<div class="page-header">
-	<div class="page-title">
-		&nbsp;
-	</div>
-</div>
-
-<div class="tabbable page-tabs">
-	<ul class="nav nav-tabs">
-		<li><a data-toggle="tab" class="active" href="#tutors">tutors</a></li>
-		<li><a data-toggle="tab" href="#students">students</a></li>
-		<li><a data-toggle="tab" href="#graduates">graduates</a></li>
-	</ul>
-	<div class="tab-content">
-		<div class="tab-pane fade active in" id="tutors">
-			<div class="block">
-				<div class="page-header">
-					<div class="page-title">
-						<a href="#" class="btn btn-success"><i class="icon-plus"></i> Invite Tutor</a>
+<form action="#" class="search-line block" role="form">
+				<span class="subtitle"><i class="icon-search3"></i> Search for Roadmaps</span>
+				<div class="input-group">
+					<div class="search-control">
+						<input type="text" class="form-control autocomplete ui-autocomplete-input" placeholder="What are you looking for?" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
 					</div>
+					<span class="input-group-btn">
+						<a href="student-search-roadmaps-results.html" class="btn btn-primary" >Search</a>
+					</span>
 				</div>
-
-				<div class="page-header">
-					<div class="page-title">
-						&nbsp;
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Tutors</h6></div>
-					<div class="datatable">
-						<table class="table">
-							<thead>
-								<th>name</th>
-								<th># students</th>
-								<th># graduates</th>
-								<th>ratings</th>
-							</thead>
-
-							<tbody>
-								<tr>
-									<td><a href="#">Moshe</a></td>
-									<td>3</td>
-									<td>10</td>
-									<td><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star2"></i></td>
-								</tr>
-								<tr>
-									<td><a href="#">Yonatan</a></td>
-									<td>3</td>
-									<td>10</td>
-									<td><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star2"></i></td>
-								</tr>
-							</tbody>
-
-						</table>
+			</form>
 
 
 
-					</div>
-				</div>
-			</div>
+<div class="col-md-6">
+
+	<div class="panel panel-default">
+  	<div class="panel-heading"><h6 class="panel-title">Most Popular</h6></div>
+  	<div class="panel-body">
+			<ul class="search-results">
+															<li>
+																<h6><a href="#">java for noobs</a></h6>
+																<a href="#" class="result-url">by Chaim Turkel</a>
+																<p>You will learn basic of java and be able to develop swing applications and also swift...</p>
+															</li>
+
+															<li>
+																<h6><a href="#">java for android developers</a></h6>
+																<a href="#" class="result-url">by Yossi Elkrief</a>
+																<p>You will learn java with a lot of android stuff as well</p>
+															</li>
+														</ul>
 		</div>
-		<div class="tab-pane fade" id="students">
-			<div class="block">
-				<div class="panel panel-default">
-					<div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Students</h6></div>
-					<div class="datatable">
-						<table class="table">
-							<thead>
-								<th>name</th>
-								<th>progress</th>
-								<th>tutor</th>
-							</thead>
-
-							<tbody>
-								<tr>
-									<td><a href="#">Eli</a></td>
-									<td>3/5</td>
-									<td><a href="#">Gilad</a></td>
-								</tr>
-								<tr>
-									<td><a href="#">Benny</a></td>
-									<td>4/5</td>
-									<td><a href="#">Iftach</a></td>
-								</tr>
-							</tbody>
-
-						</table>
+  </div>
 
 
-
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="tab-pane fade" id="graduates">
-			<div class="block">
-				<div class="panel panel-default">
-					<div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Graduates</h6></div>
-					<div class="datatable">
-						<table class="table">
-							<thead>
-								<th>name</th>
-								<th>graduated at</th>
-								<th>tutored by</th>
-								<th>roadmap rating</th>
-								<th>tutor rating</th>
-							</thead>
-
-							<tbody>
-								<tr>
-									<td><a href="#">Eli</a></td>
-									<td>2016-07-01</td>
-									<td><a href="#">Gilad</a></td>
-									<td><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star2"></i></td>
-									<td><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star2"></i></td>
-
-								</tr>
-								<tr>
-									<td><a href="#">Benny</a></td>
-									<td>2017-01-01</td>
-									<td><a href="#">Yuval</a></td>
-									<td><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star2"></i></td>
-									<td><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i></td>
-								</tr>
-							</tbody>
-
-						</table>
-
-
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
+<div class="col-md-6">
+	<div class="panel panel-default">
+  	<div class="panel-heading"><h6 class="panel-title">Latest</h6></div>
+  	<div class="panel-body">
+			<ul class="search-results">
+															<li>
+																<h6><a href="#">java for noobs</a></h6>
+																<a href="#" class="result-url">by Chaim Turkel</a>
+																<p>You will learn basic of java and be able to develop swing applications and also swift...</p>
+															</li>
 
-
+															<li>
+																<h6><a href="#">java for android developers</a></h6>
+																<a href="#" class="result-url">by Yossi Elkrief</a>
+																<p>You will learn java with a lot of android stuff as well</p>
+															</li>
+														</ul>
+		</div>
+  </div>
+</div>
 
 <script>
 function unassign(taskID,developerID){
