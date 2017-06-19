@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoadMapper</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/londinium-theme.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="http://assets.codemill.io/css/londinium-ext.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script></head>
+<!--
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+ -->
+<script type="text/javascript" src="js/plugins/charts/sparkline.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uniform.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/select2.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/inputmask.js"></script>
+<script type="text/javascript" src="js/plugins/forms/autosize.js"></script>
+<script type="text/javascript" src="js/plugins/forms/inputlimit.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/listbox.js"></script>
+<script type="text/javascript" src="js/plugins/forms/multiselect.js"></script>
+<script type="text/javascript" src="js/plugins/forms/validate.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/tags.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/switch.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uploader/plupload.full.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/uploader/plupload.queue.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/wysihtml5/wysihtml5.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/wysihtml5/toolbar.js"></script>
+
+<script type="text/javascript" src="js/plugins/interface/daterangepicker.js"></script>
+<script type="text/javascript" src="js/plugins/interface/fancybox.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/moment.js"></script>
+<script type="text/javascript" src="js/plugins/interface/jgrowl.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/datatables.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/colorpicker.js"></script>
+<script type="text/javascript" src="js/plugins/interface/fullcalendar.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/timepicker.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/collapsible.min.js"></script>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/application.js"></script>
+
+<link rel="stylesheet" href="//releases.flowplayer.org/5.5.2/skin/minimalist.css" >
+<script src="//releases.flowplayer.org/5.5.2/flowplayer.min.js"></script>
+<!-- Include lines below to support multiple resolutions via quality selector plugin -->
+<link rel="stylesheet" href="//flowplayer.org/drive/quality-selector.css">
+<script src="//flowplayer.org/drive/quality-selector.js"></script>
+
+
+</head>
+
+<body class="sidebar-wide">
+
+	<!-- Navbar -->
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"><img src="http://assets.codemill.io/images/logos/2/xcutLogoS_03.png" alt="Londinium"></a>
+			<a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons">
+				<span class="sr-only">Toggle navbar</span>
+				<i class="icon-grid3"></i>
+			</button>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="icon-paragraph-justify2"></i>
+			</button>
+		</div>
+
+		<ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<i class="icon-paragraph-justify2"></i>
+					<span class="label label-default">6</span>
+				</a>
+				<div class="popup dropdown-menu dropdown-menu-right" style="display: none;">
+					<div class="popup-header">
+						<a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+						<span>Messages</span>
+						<a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+					</div>
+					<ul class="popup-messages">
+						<li class="unread">
+							<a href="#">
+								<img src="http://placehold.it/300" alt="" class="user-face">
+								<strong>Eugene Kopyov <i class="icon-attachment2"></i></strong>
+								<span>Aliquam interdum convallis massa...</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="http://placehold.it/300" alt="" class="user-face">
+								<strong>Jason Goldsmith <i class="icon-attachment2"></i></strong>
+								<span>Aliquam interdum convallis massa...</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="http://placehold.it/300" alt="" class="user-face">
+								<strong>Angel Novator</strong>
+								<span>Aliquam interdum convallis massa...</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="http://placehold.it/300" alt="" class="user-face">
+								<strong>Monica Bloomberg</strong>
+								<span>Aliquam interdum convallis massa...</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="http://placehold.it/300" alt="" class="user-face">
+								<strong>Patrick Winsleur</strong>
+								<span>Aliquam interdum convallis massa...</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+					<li class="user dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							<img src="https://avatars0.githubusercontent.com/u/672778?v=3">
+							<span>shaharsol</span>
+							<i class="caret"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right icons-right">
+
+								<!-- <li><a href="/developers"><i class="icon-wrench"></i> Switch to Developers Dashboard</a></li> -->
+
+							<li><a href="/logout"><i class="icon-exit"></i> Logout</a></li>
+							<li><a href="author-index.html"><i class="icon-exit"></i> Authors</a></li>
+							<li><a href="tutor-index.html"><i class="icon-exit"></i> Tutors</a></li>
+							<li><a href="student-index.html"><i class="icon-exit"></i> Students</a></li>
+
+						</ul>
+					</li>
+				</ul>
+	</div>
+	<!-- /navbar -->
+
+
+	<!-- Page container -->
+ 	<div class="page-container">
+
+
+		<!-- Sidebar -->
+		<div class="sidebar collapse">
+			<div class="sidebar-content">
+
+
+
+				<!-- Main navigation -->
+				<ul class="navigation">
+					<li class=""><a href="student-search-roadmaps.html"><span>Search Roadmaps</span> <i class="icon-people"></i></a></li>
+					<li class="active"><a href="student-my-roadmaps.html"><span>My Roadmaps</span> <i class="icon-people"></i></a></li>
+				</ul>
+				<!-- /main navigation -->
+
+			</div>
+		</div>
+		<!-- /sidebar -->
+
+
+		<!-- Page content -->
+	 	<div class="page-content">
+
+			<div class="page-header">
+							<div class="page-title">
+								<h3>Java for noobs <small>by Michael Hollander</small></h3>
+							</div>
+
+
+						</div>
+
+						<div class="block">
+							    		<ul class="statistics">
+							    			<li>
+							    				<div class="statistics-info">
+								    				<a href="#" title="" class="bg-success"><i class="icon-user-plus"></i></a>
+								    				<strong>3/5 Steps</strong>
+								    			</div>
+												<div class="progress progress-micro">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+														<span class="sr-only">60% Complete</span>
+													</div>
+												</div>
+												<span>RoadMap progress</span>
+							    			</li>
+							    		</ul>
+						    		</div>
+
+						<div class="row">
+							<div class="col-lg-2">
+								<div class="sidebar collapse">
+									<div class="sidebar-content">
+											<ul class="navigation">
+												<li>
+													<a href="#" class="expand level-open">Intro to java</a>
+													<ul style="display:block">
+														<li><a href="#"Some youtube video</a></li>
+														<li>Some blog post</li>
+														<li>an excercise</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="expand level-open">Swing</a>
+													<ul style="display:block">
+														<li>Some youtube video</li>
+														<li>Some blog post</li>
+														<li>an excercise</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="expand level-open">J2EE</a>
+													<ul style="display:block">
+														<li>Some youtube video</li>
+														<li>Some blog post</li>
+														<li>an excercise</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+							</div>
+							<div class="col-lg-8">
+								<div>
+									<iframe width="640" height="360" src="https://www.youtube.com/embed/Xm8Fe3dHmkE" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div>
+									<div class="well">
+		                        <ul class="pager">
+		                            <li class="previous"><a href="#">← Prev</a></li>
+		                            <li class="next"><a href="#">Next →</a></li>
+		                        </ul>
+		                    </div>
+								</div>
+							</div>
+							<div class="col-lg-2">
+								<img style="width:100%;" src="whatsappchat.png">
+							</div>
+						</div>
+					</div>
+				</div>
+<script>
+function unassign(taskID,developerID){
+	if(confirm('Are you sure?')){
+		if(confirm('Are you really really really sure???')){
+			$.ajax({
+				type: 'POST',
+				url: '/admin/unassign-developer',
+				data: {
+					task_id: taskID,
+					developer_id: developerID
+				},
+				success: function(data){
+					$('#tr_' + taskID).effect('highlight', {}, 200, function(){
+					    $(this).fadeOut('slow', function(){
+					        $(this).remove();
+					    });
+					});
+				},
+				error: function(){
+					alert('something went wrong...');
+				}
+			});
+		}
+	}
+}
+</script>
+
+
+	        <!-- Footer -->
+	        <div class="footer clearfix">
+		        <div class="pull-left">&copy; 2017. RoadMapper</div>
+	        	<div class="pull-right icons-group">
+	        		<a href="#"><i class="icon-screen2"></i></a>
+	        		<a href="#"><i class="icon-balance"></i></a>
+	        		<a href="#"><i class="icon-cog3"></i></a>
+	        	</div>
+	        </div>
+	        <!-- /footer -->
+
+
+		</div>
+		<!-- /page content -->
+
+
+	</div>
+	<!-- /page container -->
+
+</body>
+</html>
